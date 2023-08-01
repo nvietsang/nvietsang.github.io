@@ -103,7 +103,7 @@
 
 <h3 id="discussion">Discussion</h3>
 
-<p>We observe that the fault injection plays the role as a filter for the collected ciphertexts. For instance, using stuck-at-0 fault model to choose the ciphertexts corresponding to the value 0 at the targeted by of the state right before the last MixColumns.</p>
+<p>We observe that the fault injection plays the role as a filter for the collected ciphertexts. For instance, using stuck-at-0 fault model to choose the ciphertexts corresponding to the value 0 at the targeted byte of the state right before the last MixColumns.</p>
 
 <p>Why do we target one byte of the state right before the last MixColumns? Because the ciphertext bytes still have uniform distribution thanks to the diffusion of the last MixColumns. Then, we can make hypothesis for 4 bytes of the last round key to do the key recovery. Of course, we can target another byte in a middle round, e.g., 8th, 7th, etc. However, in that case, the backward computation from the ciphertexts is more complicated and requires more bytes for the hypothesis key.</p>
 
