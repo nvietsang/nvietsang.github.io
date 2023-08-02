@@ -48,7 +48,7 @@ We consider the diagonals (red values) in the tables and come up with some obser
 
 The attack is summarized to 3 phases as below:
 
-- Target one byte of the state right before the last MixColumns. Inject a fault for each encryption. Collects the ciphertexts where the fault is not effective.
+- Target one byte of the state right before the last MixColumns. Inject a fault for each encryption. Collect the ciphertexts where the fault is not effective.
 - Use Squared Eulidean Imbalance (SEI) to exploit the non-uniform distribution of the above faulted byte by computing backwards from the ciphertexts and 4-byte hypothesis of the last round key.
 
 ### Discussion
