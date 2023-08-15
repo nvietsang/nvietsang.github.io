@@ -123,15 +123,15 @@ div.note {
 }
 
 /* Tables */
-table {margin: .5em auto 1.5em auto; width: 98%;}
+table {margin: .5em auto 1.5em auto; width: 95%;}
 	
 	/* Thead */
-	thead th {padding: .5em .4em; text-align: left;}
+	thead th {padding: .5em .4em; text-align: left; border: 1px solid; background-color: #c4c4c4;}
 	thead td {}
 
 	/* Tbody */
-	tbody td {padding: .5em .4em;}
-	tbody th {}
+	tbody td {padding: .5em .4em; border: 1px solid;}
+	tbody th {padding: .5em .4em; text-align: left; border: 1px solid; background-color: #c4c4c4;}
 	
 	tbody .alt td {}
 	tbody .alt th {}

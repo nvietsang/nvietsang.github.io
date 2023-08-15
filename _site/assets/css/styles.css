@@ -513,18 +513,28 @@ div.note {
 /* Tables */
 table {
   margin: 0.5em auto 1.5em auto;
-  width: 98%;
+  width: 95%;
 }
 
 /* Thead */
 thead th {
   padding: 0.5em 0.4em;
   text-align: left;
+  border: 1px solid;
+  background-color: #c4c4c4;
 }
 
 /* Tbody */
 tbody td {
   padding: 0.5em 0.4em;
+  border: 1px solid;
+}
+
+tbody th {
+  padding: 0.5em 0.4em;
+  text-align: left;
+  border: 1px solid;
+  background-color: #c4c4c4;
 }
 
 /* Tfoot */
