@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SIFA on Masked AES with Fault Countermeasures
+title: SIFA on Masked Computation
 ---
 
 This post explains how to use SIFA to attack AES implementations protected with both masking and detection-based fault countermeasures. The nice idea of this attack was presented in the paper [[Dobraunig et al., ASIACRYPT 2018]](https://eprint.iacr.org/2018/357.pdf) that I enjoyed reading very much.
@@ -77,16 +77,18 @@ Pr[q'=0 | q'=q] &= 9/12 = 0.75  &(= Pr[q=0] = 0.75)
 \end{align}
 $$
 
-## Applying SFA
+### Applying SFA
 
 We consider $$Pr[q'=1] = 0.375 (\ne Pr[q=1] = 0.25)$$. Note that, in this case, we are taking both correct and incorrect values of $$q'$$, corresponding both effective and ineffective faults, into account. Therefore, we should exploit the deviated distribution by using SFA.
 
-## Applying SIFA
+### Applying SIFA
 
 First, we ignore the above probabilities and assume that $$Pr[q'=1 \vert q'=q] \ne 0.25$$. Note that, in this case, we are only taking *incorrect* values of $$q'$$, into account, which means that $$q'=q$$. In other words, we only consider the ineffective faults. Since there is a deviation in the distribution of $$q'$$, we can apply SIFA.
 
 Now, we come back to our above example. Here, $$Pr[q'=1 \vert q'=q] = 0.25$$ $$(= Pr[q=1] = 0.25)$$, there is no deviation that we can exploit. Therefore, SIFA is not applicable in this case. However, in the paper, the authors describe some other fault's effects from which we can use SIFA. For instance, a single fault that skipping the addition of $$r_{0,1}$$ in $$q_0$$ ($$q_0' = x_0y_0$$) gives us $$Pr[q'=1 \vert q'=q] \ne 0.25$$.
 
-## 4. Faulting Masked S-boxes
+In the presence of fault countermeasures, for example, duplicating the computation and comparing their outputs, SFA is not applicable while SIFA still works. That's why SIFA is a very powerful attack.
+
+## 3. Faulting Masked S-boxes
 
 So far, we have just examined the deviation of distribution on the shared computation of an AND gate. With the same idea in mind, we scale up the problem to the shared computation of the S-box. We inject a single fault in the S-box computation, then draw the truth table and observe the distribution of the output to see if we can apply SFA or SIFA.
