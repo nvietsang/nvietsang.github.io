@@ -6,4 +6,4 @@ Maximum likelihood
 
 Minimal (resp. Maximal) mean Hamming weight
 
-SEI
+Squared Euclidean Imbalance
