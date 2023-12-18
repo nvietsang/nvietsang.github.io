@@ -1,9 +1,5 @@
 - name: Home
   link: /
-- name: Research
-  link: /research.html
-- name: Teaching
-  link: /teaching.html
 - name: Projects
   link: /projects.html
 - name: Posts
