@@ -3,11 +3,11 @@ layout: post
 title: DFA - Differential Fault Attack on AES
 ---
 
-This post explains the main idea of the Differential Fault Attack on AES with fault injected before the MixColumns in the 9-th round. For the original paper, we refer to [[Piret and Quisquater, CHES 2003]](https://link.springer.com/chapter/10.1007/978-3-540-45238-6_7).
+This post explains the main idea of the Differential Fault Attack on AES with faults injected before the MixColumns in the 9-th round. For the original paper, we refer to [[Piret and Quisquater, CHES 2003]](https://link.springer.com/chapter/10.1007/978-3-540-45238-6_7).
 
-## 1. Principle
+## # Principle
 
-Let us assume that a fault is injected into the first byte of the state before the MixColumns of the 9-th round. As a consequence, the value of this byte changes from $$v$$ to $$v'$$, and the difference is $$\epsilon = v \oplus v'$$. Faulting the first byte also causes the changes in the 4 bytes of the first column after the computation of MixColumns.
+Let us assume that a fault is injected into the first byte of the state before the MixColumns of the 9-th round. As a consequence, the value of this byte changes from $$a_0$$ to $$a_0'$$, and the difference is $$\epsilon = a_0 \oplus a_0'$$. Faulting the first byte also causes the changes of the 4 bytes in the first column after the computation of MixColumns.
 
 <div style="text-align: center">
     <img src="/assets/figures/2024-03-18-DFA-PQ-v1.png" width=700 alt="drawing"/>
@@ -68,10 +68,14 @@ We denote such a pair $$(C, C')$$. We perform the following steps:
 4. Check if $$\mathbf{v} \oplus \mathbf{v'}$$ has the relation as $$\mathbf{b} \oplus \mathbf{b'}$$. If yes, $$K_q^h$$ is a good candidate. If no, go back to step 2 and try with another hypothesis.
 5. Repeat the steps from 1 to 4 with several different pairs of $$(C_q, C_q')$$ untill we obtain a unique quadruplet of key (the original paper claimed that 2 pairs is enough).
 
-## 2. Conditions on Faults
+## # Conditions on Faults
 
 The explanation above considers the fault injected in the first byte. In fact, this attack does not require the fault position to be fixed, and also does not require the fault effect to be identical. In order to recover a quadruplet of key, it just needs 2 faults in the same column to collect 2 pairs of correct and faulty ciphertexts.
 
 From a pair $$(C, C')$$, we know the difference $$C \oplus C'$$ which must have 4 nonzero bytes. This determines a quadruplet so that we know which quadruplet of key to make hypothesis. Then, we compute backwards to obtain $$\mathbf{v} \oplus \mathbf{v'}$$.
 
 For any other possible position of the fault, we can always compute derive a relation similar to $$\mathbf{b} \oplus \mathbf{b'}$$. Since we already know which quadruplet we are working with, we know which column of $$\mathbf{v}$$ and $$\mathbf{v'}$$ belong to. There are 4 possible relations for $$\mathbf{b} \oplus \mathbf{b'}$$ in this column. If $$\mathbf{v} \oplus \mathbf{v'}$$ matches one of these relations, it's good!
+
+## # Implementation
+
+Here is my implementation of the above attack: [https://github.com/nvietsang/dfa-on-aes](https://github.com/nvietsang/dfa-on-aes).
