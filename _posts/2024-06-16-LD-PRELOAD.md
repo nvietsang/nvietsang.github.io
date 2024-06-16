@@ -3,11 +3,11 @@ layout: post
 title: Override behavior of a C function with LD_PRELOAD
 ---
 
-This post explains how to LD_PRELOAD to customize or change the behavior of a library function. I use this trick to force the pseudo-random number generator (PRNG) to return a fixed number (cut off the PRNG) in order to perform some attacks on white-box implementations of ECDSA in the [WhibOx contest](https://whibox-contest-2024.cryptoexperts.net).
+This post explains how to use LD_PRELOAD to customize or change the behavior of a library function. I use this trick to force the pseudo-random number generator (PRNG) to return a fixed number (cut off the PRNG) in order to perform some attacks on white-box implementations of ECDSA in the [WhibOx contest](https://whibox-contest-2024.cryptoexperts.net).
 
 ## Context
 
-In ECDSA, one of the key points of its security is the randomization of the ephemeral key $$k$$. In the contest, several challenges use an external function for PRNG, for example, $$\texttt{rand()}$$ from $$\texttt{stdlib.h}$$ or $$\texttt{gmp_urandomm()}$$ from $$\texttt{gmp}$$. To cut off these sources of PRNG, I force the PRNG function call to return a fixed number by using LD_PRELOAD.
+In ECDSA, one of the key points of its security is the randomization of the ephemeral key $$k$$. If this ephemeral key is reused for 2 different signatures, we can easily recover the secret key ([read more](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)). In the contest, several challenges use an external function for PRNG, for example, $$\texttt{rand()}$$ from $$\texttt{stdlib.h}$$ or $$\texttt{gmp_urandomm()}$$ from $$\texttt{gmp}$$. To cut off these sources of PRNG, I force the PRNG function call to return a fixed number by using LD_PRELOAD.
 
 ## How to do?
 
@@ -67,7 +67,7 @@ r = 5
 
 ## It worked! But why?
 
-We use `ldd` command to see which shared libraries are used when the program is executed:
+We use $$\texttt{ldd}$$ command to see which shared libraries are used when the program is executed:
 
 ```bash
 $ ldd ./main
