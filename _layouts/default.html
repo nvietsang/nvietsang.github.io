@@ -1,35 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    {% seo title=false %}
+    {% include meta.html %}
 
-<head>
-	<meta charset="utf-8" />
-	<title>Viet Sang Nguyen</title>
-	<link rel="stylesheet" href="/assets/css/styles.css" />
-</head>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-<body id="index" class="home">
-	<header id="banner" class="body">
-		<h1><a href="/">Viet Sang Nguyen</a></h1>
-		<p>&emsp; (call me /ˈvjɛtˌsɑːŋ/)</p>
-        {% include navigation.html %}
-	</header>
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
+    {% include analytics_head.html %}
+  </head>
 
-	<!-- INFO -->
-    {{ content }}
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" /></a>
 
-	<!-- FOOTER -->
-	<footer id="contentinfo" class="body">
-		<address id="about" class="vcard body">
-			Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of
-			<a href="http://python.org">Python</a>.
-		</address><!-- /#about -->
+            <div class="site-info">
+              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+              <p class="site-description">{{ site.description }}</p> 
+            </div>
 
-		<p>The theme is inspired by <a
-				href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing
-				Magazine</a>, thanks!
-		</p>
-	</footer><!-- /#contentinfo -->
-	
-</body>
+            <nav>
+              <a href="{{ site.baseurl }}/">Home</a>
+              <a href="{{ site.baseurl }}/projects">Projects</a>
+              <a href="{{ site.baseurl }}/posts">Posts</a>
+              <a href="{{ site.baseurl }}/misc">Misc</a>
+            </nav>
+          </header>
+        </div>
+      </div>
 
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          {{ content }}
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            {% include svg-icons.html %}
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+  </body>
 </html>
