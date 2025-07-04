@@ -15,7 +15,7 @@ Let's go step by step!
 
 First of all, we write a simple program to generate a random integer in the file `main.c`:
 
-```C
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -42,7 +42,7 @@ r = 318986898
 
 Now, we customize our own $$\texttt{rand()}$$ function (with the same prototype) in a file named `evil.c`. Suppose that we force this function to always return $$5$$ for every call.
 
-```C
+```c
 int rand(void){
     return 5;
 }
