@@ -10,6 +10,14 @@ Below is a list of links that I found interesting:
 <ul>
 <li>
     2025/03/27: 
+    <a href="https://www.esat.kuleuven.be/cosic/blog/ccs25-falconbug/">ACM CCS 2025 Spotlight: How Bad Was The Falcon Bug of 2019?</a>
+    by Quinten Norga
+    <br>
+    This blog summarizes the important bugs in the Falcon constant-time implementation. These bugs are from an incorrect distribution of signatures.
+</li>
+
+<li>
+    2025/03/27: 
     <a href="https://www.youtube.com/watch?v=6qD-T1gjtKw">Understanding and Explaining Post-Quantum Crypto with Cartoons</a>
     by Klaus Schmeh
     <br>
