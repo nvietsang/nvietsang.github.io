@@ -4,10 +4,18 @@ title: PhD
 permalink: /phd/
 ---
 
-My PhD, entitled **Physical Attacks against Symmetric Cryptography Standards**, was conducted between January 2023 and October 2025. It contains my works on correlation power analysis attacks and fault attacks, focusing mainly on Ascon-AEAD.
+I completed my PhD at Université de Saint-Etienne under the supervison of <a href="https://scholar.google.be/citations?user=4osxa5gAAAAJ&hl=fr">Vincent Grosso</a> and <a href="https://cayrel.net">Pierre-Louis Cayrel</a>.
+
+It is entitled **Physical Attacks against Symmetric Cryptography Standards** and was conducted between January 2023 and October 2025. It contains my works on correlation power analysis attacks and fault attacks, focusing mainly on the new lightweight standard Ascon-AEAD and partly on AES.
 
 - <a href="/assets/docs/phd-manuscript.pdf">[Manuscript]</a>
 - <a href="/assets/docs/phd-slides.pdf">[Slides]</a>
+
+**Defense Information**:
+
+- Time: 10h00
+- Date: Friday, 19 December 2025
+- Location : Room F021b, Laboratoire Hubert Curien, 18 rue Professeur Benoît Lauras, 42000 Saint-Étienne
 
 **Abstract**: The rise of embedded devices in the era of Internet of Things (IoT) has increased the demand for secure cryptographic algorithms. While standardized algorithms are proven to be secure in the black-box model, where an adversary has access only to inputs and outputs, this model is not sufficient to capture real-world threats. In practice, the adversary may have physical access to the devices and recover the secret key used in the algorithms by physical attacks, which are generally classified as Side-Channel Attacks (SCA) and Fault Attacks (FA). This thesis explores the threats of such attacks on symmetric cryptography standards, with a focus on the long-standing Advanced Encryption Standard (AES) and the newly standardized lightweight authenticated encryption Ascon-AEAD.
 
