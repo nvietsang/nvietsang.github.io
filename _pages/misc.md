@@ -9,7 +9,15 @@ permalink: /misc/
 Below is a list of links that I found interesting:
 <ul>
 <li>
-    2025/03/27: 
+    2025/11/23: 
+    <a href="https://electricdusk.com/ntt.html">Intro to the The Number Theoretic Transform in ML-DSA and ML-KEM</a>
+    by Amber Sprenkels
+    <br>
+    I have read several blogs about NTT, but this is the best one in my opinion. While the others begin with maths and then continue with maths, this blog provides us with the high-level ideas by comparing with RSA. I say it again, this is the best.
+</li>
+
+<li>
+    2025/10/29: 
     <a href="https://www.esat.kuleuven.be/cosic/blog/ccs25-falconbug/">ACM CCS 2025 Spotlight: How Bad Was The Falcon Bug of 2019?</a>
     by Quinten Norga
     <br>
