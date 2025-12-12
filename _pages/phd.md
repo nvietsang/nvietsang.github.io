@@ -16,6 +16,7 @@ It is entitled **Physical Attacks against Symmetric Cryptography Standards** and
 - Time: 10h00
 - Date: Friday, 19 December 2025
 - Location : Room F021b, Laboratoire Hubert Curien, 18 rue Professeur Benoît Lauras, 42000 Saint-Étienne
+- Remote attendance: <a href="https://ujmstetienne.webex.com/ujmstetienne-en/j.php?MTID=md2fec4f6a0809ff1e504b64aa88cadd2">[link]</a> 
 
 **Abstract**: The rise of embedded devices in the era of Internet of Things (IoT) has increased the demand for secure cryptographic algorithms. While standardized algorithms are proven to be secure in the black-box model, where an adversary has access only to inputs and outputs, this model is not sufficient to capture real-world threats. In practice, the adversary may have physical access to the devices and recover the secret key used in the algorithms by physical attacks, which are generally classified as Side-Channel Attacks (SCA) and Fault Attacks (FA). This thesis explores the threats of such attacks on symmetric cryptography standards, with a focus on the long-standing Advanced Encryption Standard (AES) and the newly standardized lightweight authenticated encryption Ascon-AEAD.
 
