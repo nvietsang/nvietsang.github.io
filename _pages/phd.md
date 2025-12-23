@@ -11,13 +11,6 @@ It is entitled **Physical Attacks against Symmetric Cryptography Standards** and
 - <a href="/assets/docs/phd-manuscript.pdf">[Manuscript]</a>
 - <a href="/assets/docs/phd-slides.pdf">[Slides]</a>
 
-**Defense Information**:
-
-- Time: 10h00
-- Date: Friday, 19 December 2025
-- Location : Room F021b, Laboratoire Hubert Curien, 18 rue Professeur Benoît Lauras, 42000 Saint-Étienne
-- Remote attendance: <a href="https://ujmstetienne.webex.com/ujmstetienne-en/j.php?MTID=md2fec4f6a0809ff1e504b64aa88cadd2">[link]</a> 
-
 **Abstract**: The rise of embedded devices in the era of Internet of Things (IoT) has increased the demand for secure cryptographic algorithms. While standardized algorithms are proven to be secure in the black-box model, where an adversary has access only to inputs and outputs, this model is not sufficient to capture real-world threats. In practice, the adversary may have physical access to the devices and recover the secret key used in the algorithms by physical attacks, which are generally classified as Side-Channel Attacks (SCA) and Fault Attacks (FA). This thesis explores the threats of such attacks on symmetric cryptography standards, with a focus on the long-standing Advanced Encryption Standard (AES) and the newly standardized lightweight authenticated encryption Ascon-AEAD.
 
 In the first part of this thesis, we focus on a prominent type of SCA, namely Correlation Power Analysis (CPA), targeting Ascon-AEAD. We analyze different approaches for choosing the selection function, which is a core factor of CPA, to provide insights into when and why an attack succeeds or fails. Our analysis is validated with a second-order CPA attack against a masked software implementation, which also provides the first practical indication of the data and computational cost for full key recovery in a protected implementation. We further propose extending the selection function from one bit to multiple bits, thereby increasing success rates.
