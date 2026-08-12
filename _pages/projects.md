@@ -5,6 +5,10 @@ permalink: /projects/
 ---
 
 <p>
+    <b>S-EUCLEAK</b>: PoC simulation of EUCLEAK attack on ECDSA
+    <br><a href="https://github.com/nvietsang/eucleak">[code]</a>
+</p>
+<p>
     <b>CPAKEM</b>: Simulation of CPA attack on ML-KEM
     <br><a href="https://github.com/nvietsang/cpa-on-mlkem">[code]</a>
 </p>
