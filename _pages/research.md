@@ -7,19 +7,19 @@ permalink: /research/
 
 - **SIFA on Nonce-based Authenticated Encryption: When Does It Fail? Application to Ascon**  
   Viet Sang Nguyen, Vincent Grosso, Pierre-Louis Cayrel  
-  FDTC 2025  
+  FDTC 2025 
   [<i class="fas fa-file-pdf"></i>](/assets/docs/paper_fdtc-NGC25.pdf)
           
 - **Correlation Power Analysis on Ascon with Multi-bit Selection Function**  
   Viet Sang Nguyen, Vincent Grosso, Pierre-Louis Cayrel  
-  SECRYPT 2025  
+  SECRYPT 2025 
   [<i class="fas fa-file-pdf"></i>](/assets/docs/paper_secrypt-NGC25.pdf)
   [<i class="fab fa-github"></i>](https://github.com/nvietsang/multibitcpa-ascon)  
   *(Some errors in this paper were subsequently corrected in my PhD dissertation.)*
 
 - **Practical Persistent Fault Attacks on AES with Instruction Skip**  
   Viet Sang Nguyen, Vincent Grosso, Pierre-Louis Cayrel  
-  IACR CiC 2025  
+  IACR CiC 2025 
   [<i class="fas fa-file-pdf"></i>](https://cic.iacr.org/p/2/1/40)
   [<i class="fab fa-github"></i>](https://github.com/nvietsang/pfa-inskip)  
 
