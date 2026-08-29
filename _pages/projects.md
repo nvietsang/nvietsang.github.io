@@ -17,6 +17,15 @@ Here is a list of the projects I have worked on, including both personal project
 - <b>Art-PhD</b>: Artifacts for my PhD dissertation
   [<i class="fab fa-github"></i>](https://github.com/nvietsang/artifact)
 
+- <b>socpa-ascon</b>: Incremental Second-Order CPA Attack on Ascon
+  [<i class="fab fa-github"></i>](https://github.com/nvietsang/socpa-ascon)
+
+- <b>multibitcpa-ascon</b>: CPA Attack on Ascon with Multi-bit Selection Function
+  [<i class="fab fa-github"></i>](https://github.com/nvietsang/multibitcpa-ascon)
+
+- <b>pfa-inskip</b>: Persistent Fault Attacks on AES with Instruction Skip
+  [<i class="fab fa-github"></i>](https://github.com/nvietsang/pfa-inskip)
+
 - <b>TIPresent</b>: Threshold Implementation of PRESENT cipher in ARM
   [<i class="fab fa-github"></i>](https://github.com/nvietsang/tipresent)
 
