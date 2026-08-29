@@ -3,6 +3,8 @@ title: "Research"
 permalink: /research/
 ---
 
+Here are my scientific activities:
+
 ## Publications
 
 - **SIFA on Nonce-based Authenticated Encryption: When Does It Fail? Application to Ascon**  
@@ -53,6 +55,8 @@ I completed my PhD at Université de Saint-Etienne under the supervison of <a hr
 ## Service
 
 External Reviewer: EuroCrypt 2024, EuroCrypt 2025, TCHES 2026
+
+Artifact PC member: TCHES 2026
 
 ## Talks / Posters
 
