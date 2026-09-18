@@ -5,6 +5,10 @@ permalink: /misc/
 
 Below is a list of links that I found interesting:
 
+- 2026/09/17: <a href="https://dropbox.tech/security/how-dropbox-securely-stores-your-passwords#:~:text=First%2C%20the%20plaintext%20password%20is%20transformed%20into,allow%20the%20input%20of%20arbitrarily%20long%20passwords."> How Dropbox securely stores your passwords </a> by Devdatta Akhawe. This blog provides the insights of how to design a secure system to store passwords.
+
+- 2026/09/15: <a href="https://www.latacora.com/blog/cryptographic-right-answers/"> Cryptographic right answers</a> by Latacora. This blog provides recommendations for developers who are designing a cryptographic systems but don't know what to choose. It also provides some rationale behind and compares with historical choices.
+
 - 2025/11/23: <a href="https://electricdusk.com/ntt.html">Intro to the The Number Theoretic Transform in ML-DSA and ML-KEM</a> by Amber Sprenkels. I have read several blogs about NTT, but this is the best one in my opinion. While the others begin with maths and then continue with maths, this blog provides us with the high-level ideas by comparing with RSA.
 
 - 2025/10/29: <a href="https://www.esat.kuleuven.be/cosic/blog/ccs25-falconbug/">ACM CCS 2025 Spotlight: How Bad Was The Falcon Bug of 2019?</a> by Quinten Norga. This blog summarizes the important bugs in the Falcon constant-time implementation. These bugs are from an incorrect distribution of signatures.
